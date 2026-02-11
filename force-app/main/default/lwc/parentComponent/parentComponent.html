@@ -2,5 +2,15 @@
     <lightning-input value=""></lightning-input>
     <lightning-button label="Set value" onclick={setValue}></lightning-button>
 
-    <c-child-component child-property1="Hello !!!"></c-child-component>
+    <c-child-component child-property1="Hello !!!" onsend={storeMessage}></c-child-component>
+
+    <lightning-button label="Call Child Method" onclick={emptychildproperty}></lightning-button>
+
+    <!-- Child to parent -->
+     <lightning-card title="Latest Method from child component" >
+         <p class="slds-p-left_small">{childMessage}</p>
+     </lightning-card>
+
 </template>
+
+

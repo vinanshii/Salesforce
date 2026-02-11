@@ -1,0 +1,26 @@
+<template>
+    <!-- Static Hello World Card -->
+    <lightning-card title="Lightning Web Component" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium">
+            <h2>Hello World!</h2>
+        </div>
+    </lightning-card>
+
+    <!-- Greeting using data binding -->
+    <div class="slds-var-m-around_medium">
+        <h2>Hello {greeting}!</h2>
+
+        <lightning-input
+            label="Name"
+            value={greeting}
+            onchange={handleGreetingChange}>
+        </lightning-input>
+    </div>
+
+    <!-- Expression / Getter Example -->
+    <lightning-card title={capitalizedGreeting}>
+        <div class="slds-var-m-around_medium">
+            <p>Today is {currentDate}</p>
+        </div>
+    </lightning-card>
+</template>
